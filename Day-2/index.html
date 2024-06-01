@@ -1,15 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-2 Of UI JavaScript</title>
     <script src="script.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-</head>
-<body>
-    <div class="caontaine"></div>
-</body>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button
+      class="btn btn-primary m-3 p-2"
+      data-bs-target="#modal-box"
+      data-bs-toggle="modal"
+      id="btnBook"
+    >
+      Book Ticket
+    </button>
+    <div class="modal fade" id="modal-box">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="bktkt">Book Ticket</h2>
+            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <nav class="d-lg-flex justify-content-between p-2 bg-dark p-2">
+              <div class="m-1">
+                <select name="movei" class="form-select" id="lstMovies">
+                  <option value="Select Movie">Select Movie</option>
+                  <option value="AgniPath">AgniPath</option>
+                  <option value="Koali">Kaali</option>
+                </select>
+              </div>
+              <div class="m-1">
+                <select name="Date" class="form-select" id="lstDate">
+                  <option value="Select Date">Select Date</option>
+                  <option value="21st June,2024">21st June,2024</option>
+                  <option value="22nd June,2024">22nd June,2024</option>
+                </select>
+              </div>
+              <div class="m-1">
+                <select name="Cinema" class="form-select" id="lstCinema">
+                  <option value="Select Cinema">Select Cinema</option>
+                  <option value="PVR Rewa">PVR Rewa</option>
+                  <option value="Unity Satna">Unity Satna</option>
+                </select>
+              </div>
+              <div class="m-1">
+                <select name="Timei" class="form-select" id="lstTiming">
+                  <option value="Select Timing">Select Time</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                </select>
+              </div>
+              <button
+                class="btn btn-warning"
+                data-bs-dismiss="modal"
+                onclick="Bookbtn()"
+                id="book-ticket"
+              >
+                Book
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id="summaryContainer">
+      <div class="row">
+        <div
+          class="col-3 m-3"
+          style=" width: 250px; height: 350px"
+        >
+          <img src="i" id="imgPoster" style="width: 100%; height: 350px;" alt="" />
+        </div>
+        <div class="col-9">
+          <dl>
+            <dt>Movie</dt>
+            <dd id="nameMovie"></dd>
+            <dt>Date</dt>
+            <dd id="nameDate"></dd>
+            <dt>Cinema</dt>
+            <dd id="nameCinema"></dd>
+            <dt>Time</dt>
+            <dd id="nameTime"></dd>
+          </dl>
+          <div>
+            <button class="btn btn-danger" data-bs-target="#modal-box" data-bs-toggle="modal" onclick="btnModify()">
+            Modify</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
