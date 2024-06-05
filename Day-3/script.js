@@ -35,7 +35,7 @@ let Rate = parseFloat(document.getElementById("txtInterest").value)
 
   
     
-    var EMI = Math.floor(P * R * (Math.pow(1+R,N)) / (Math.pow(1+R,N))-1)
+    var EMI = Math.floor(P * R * (Math.pow((1+R),N)) / (Math.pow(1+R,N))-1)
     lblMsg.innerHTML = EMI; 
     document.getElementById("final").innerHTML = EMI.toLocaleString("en-in",{style:"currency", currency:"INR"})
     
