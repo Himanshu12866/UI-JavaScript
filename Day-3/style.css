@@ -1,6 +1,6 @@
-body{
-    background-image: linear-gradient(rgba());
-}
+/* body{
+    background-color: rgb(7, 47, 67);
+} */
 .parent{
     width: 90%;
     display: flex;
@@ -14,4 +14,24 @@ h1{
 }
 input{
     width: 100%;
+}
+.btn-class{
+    width: 40%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    display: none;
+}
+@media(max-width:500px){
+    .details{
+        width: 90%;
+    }
 }
