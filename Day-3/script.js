@@ -24,9 +24,10 @@ function ChangerangeInterest(){
 function CalculateClick(){
     var lblMsg = document.getElementById("lblMsg");
 
-    var P = parseInt(document.getElementById("txtAmount").value);
+    let P = parseInt(document.getElementById("txtAmount").value);
    
     lblMsg.innerHTML = P ; 
     
 
 }
+
