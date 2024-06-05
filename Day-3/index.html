@@ -1,20 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day- 3 JavaScript</title>
+    <title>Day- 3 JavaScript EMI Calculator</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="script.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <style>
-        h1{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Operators In JavaScript</h1>
-    <marquee behavior="" direction="right"> Coming Soon....</marquee>
+    <h1> EMI Calculator</h1>
+    <div class="parent">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 clo-sm-12">
+                <span>Amount You Need &#8377; :</span>
+<div class="input-group">
+    <input type="text" class="form-control btn-group p-1"  id="txtAmount"  onchange="ChangeAmount()">
+    <span class="input-group-text px-3"> &#8377;</span>
+
+</div>                
+            </div>
+            <div class="col-lg-4 col-md-4  clo-sm-12">
+                <span>Duration : </span>
+                <div class="input-group">
+                    <input type="text" class="form-control btn-group  "  id="txtDuration"  onchange="ChangeDuration()">
+                    <span class="input-group-text "> Year</span>
+                
+                </div>            </div>
+            <div class="col-lg-4 col-md-4  clo-sm-12">
+                <span>Interest Rate % :</span>
+                <div class="input-group">
+                    <input type="text" class="form-control btn-group"  id="txtInterest"  onchange="ChangeInterest()">
+                    <span class="input-group-text">%</span>
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="parent">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 clo-sm-12">
+                <span>Select Range &#8377; :</span>
+                <input type="range" class="form-range m-1 p-1 " min="100000"  max="1000000" id="rangeAmount" onchange="ChangerangeAmount()">
+                <div class="row d-flex">
+                    <div class="col">&#8377; : 1,00,000</div>
+                    <div class="col">&#8377; : 1,0,00,000</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4  clo-sm-12">
+                <span>Select Duration : </span>
+                <input type="range" class="form-range m-1 p-1" min="1" max="5" id="rangeDuration" onchange="ChangerangeDuration()">
+                <div class="row d-flex">
+                    <div class="col">1 Yr</div>
+                    <div class="col">5 Yr</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4  clo-sm-12">
+                <span>Select IR % :</span>
+                <input type="range" class="form-range m-1 p-1" min="10.50" max="21" step="0.1" value="12.5" id="rangeInterest" onchange="ChangerangeInterest()">
+                <div class="row d-flex">
+                    <div class="col">% 10.50</div>
+                    <div class="col">% 21</div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row p-3 my-4">
+        <div class="col text-end">
+            <button class="btn btn-primary" onclick="CalculateClick()">Calculate</button>
+        </div>
+    </div>
+    <div class="row p3 my-4">
+        <div id="lblMsg" class="text-center"></div>
+    </div>
+</div>
+
+    <!-- <div class="display">
+        <div class="row">
+            <div class="col">
+                <span>Your Amount :</span>
+                <span id="YourAmount" onchange="YourAmoChange()"></span>
+            </div>
+            <div class="col">
+                <span>Duration :</span>
+                <span id="YourDuration"></span>
+            </div>
+            <div class="col">
+                <span>Interest Rate %</span>
+                <span id="YourRate"></span>
+            </div>
+            <div class="col">
+                <span>Monthly EMI :</span>
+                <span id="YourEmi" >  </span>
+            </div>
+        </div>
+    </div> -->
+
 </body>
+
 </html>
