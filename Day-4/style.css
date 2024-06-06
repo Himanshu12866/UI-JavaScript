@@ -68,4 +68,7 @@ td {
 }
 .section-result {
   display: none;
+} 
+#viewHeight,#viewWeight,#viewBMI,#resultValue{
+    text-align: right;
 }
