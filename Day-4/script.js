@@ -20,17 +20,17 @@ function CalculateBMI() {
         document.getElementById("resultValue").innerHTML = "Normal";
 
     }
-    else if (result >= 24.9 && result >= 29.9) {
+    else if (result >= 24.9 && result <= 29.9) {
         document.getElementById("resultValue").innerHTML = "Over Weight";
 
     }
-    else if (result == 30 && result > 30) {
+    else if (result >= 30) {
         document.getElementById("resultValue").innerHTML = "Dangerous";
 
     }
-    else {
-        alert("Please Enter Value")
-    }
+   else{
+    alert("Please Input a value")
+   }
     document.getElementById("viewResult").style.display = "block"
 
 }
