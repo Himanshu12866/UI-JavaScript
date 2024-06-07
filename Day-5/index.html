@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <style>
+      /* .text-style {
+        color: red;
+        font-family: serif;
+        font-size: 30px;
+      } */
+    .form-switch{
+      text-align: center;
+      margin-top: 20px;
+    }
+    .form-check-input{
+      font-size: 25px;
+    }
+    .bi{
+      font-size: 25px;
+     padding-left: 10px;
+    }
+    .input-bg{
+      background-color: grey;
+      color: white;
+      margin: 10px;
+    }
+  
+    
+    </style>
+  </head>
+  <body>
+    <!-- <button id="btn-style" class="btn btn-primary m-3" onclick="ChangeStyle()">
+      ChangeStyle
+    </button> -->
+<div class="form-switch">
+<div>
+  <input type="checkbox" class="form-check-input" onclick="DarkTheme()">
+  <label class="form-label bi bi-sun">Light</label>
+</div>
+</div>
+    <p></p>
+<div class="container-fluid d-flex justify-content-center align-items-center" style="width: 100%; height: 60vh; margin: auto;">
+    <div class="card" id="cardBox">
+        <div class="card-header">
+<h1 style="text-align: center;"><span class="bi bi-person-fill"></span> Login Form</h1>
+            
+        </div>
+        <div class="card-body">
+          <label for="name" class="form-label">Your Name: </label>
+          <input type="text" onkeyup="ValidBox()" required id="NameBox" class="form-control">
+          <p id="validationText"></p>
+          <label for="psw"  class="form-label">Your Password:</label>
+          <input type="password"  onkeyup="PswValid()" id="PSWBox" class="form-control">
+          <p id="ValidPsw"></p>
+        
+          <button class="btn btn-dark text-light mt-4 w-100">Login</button>
+        </div>
+    </div>
+</div>
+
+
+  </body>
+</html>
