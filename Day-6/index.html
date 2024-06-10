@@ -16,7 +16,7 @@ h1{
     margin-bottom: 10px;
 }
 .d-flex{
-    height: 400px;
+    height: 450px;
     border: 1px solid black;
     margin: auto;
     width: 500px;
@@ -30,6 +30,9 @@ h1{
     font-size: 25px;
     
 }
+.progress{
+        display: none;
+    }
 @media(max-width:500px){
     .d-flex{
         display: block;
@@ -37,13 +40,14 @@ h1{
         height: 500px;
         margin: auto;
     }
+  
 }
 
 
     </style>
 </head>
 <body id="BodyColor">
-<button class="btn btn-dark m-3" onclick="Change()"> Dark </button> <span id="spanbtn" class="bi bi-sun"></span>   <h1 id="Heading">Login Form</h1>
+<button class="btn btn-dark m-3" onclick="Change()">Switch Dark </button> <span id="spanbtn" class="bi bi-sun"></span>   <h1 id="Heading">Login Form</h1>
     <div  id="mainBox" class="container-fluid  d-flex justify-content-center ">
         <div >
             <h1 id="Heading-1">Welcome Back ! LogIn</h1>
@@ -56,7 +60,9 @@ h1{
             
             <button id="visible" class="input-group-text bi bi-eye-slash" onclick="Hide()"></button>
            </div>
-           <label for="" id="Pswlbl"></label><br>
+          <div class="progress mt-3" id="displayBar">
+            <div  id="ProgressBar" > <span id="Pswlbl"></span></div>
+          </div><br>
            <label for="" class="my-3" id="Passwordlbl"></label>
            <span style="margin-top: 10px !important;" id="labelId-3" class="mt-2 pt-3">Forgot Password!</span> <a href="">SignIn?</a>
 
