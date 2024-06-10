@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6 : Form Validation Using Javascript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+    <style>
+h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.d-flex{
+    height: 400px;
+    border: 1px solid black;
+    margin: auto;
+    width: 500px;
+}
+.btn-box
+{
+    display: flex;
+    justify-content: space-between;
+}
+#spanbtn{
+    font-size: 25px;
+   
+    
+}
+
+
+    </style>
+</head>
+<body id="BodyColor">
+<button class="btn btn-dark m-3" onclick="Change()"> Dark </button> <span id="spanbtn" class="bi bi-sun"></span>   <h1 id="Heading">Login Form</h1>
+    <div  id="mainBox" class="container-fluid  d-flex justify-content-center ">
+        <div >
+            <h1 id="Heading-1">Welcome Back ! LogIn</h1>
+            <label for="" id="labelId" class="form-label">User Name :</label>
+            <input type="text" class="form-control" id="NameInput" onkeyup="NameInputForm()" placeholder="Enter Username :">
+            <label for=""  id="labelId-1"  class="my-2"></label><br>
+            <label for=""  id="labelId-2"  class="form-label mt-2">Enter Password :</label>
+           <div class="input-group">
+            <input type="password" id="PasswordInput" onkeyup="PasswordInputForm()" class="form-control" placeholder="Password">
+            
+            <button id="visible" class="input-group-text bi bi-eye-slash" onclick="Hide()"></button>
+           </div>
+           <label for="" id="Pswlbl"></label><br>
+           <label for="" class="my-3" id="Passwordlbl"></label>
+           <span style="margin-top: 10px !important;" id="labelId-3" class="mt-2 pt-3">Forgot Password!</span> <a href="">SignIn?</a>
+
+         <div class="mt-3 btn-box">
+            <button  class="w-25 btn btn-dark">Login</button>
+             <buttont class="w-25 btn btn-warning">Cancel</button>
+         </div>
+        </div>
+        
+    </div>
+</body>
+</html>
