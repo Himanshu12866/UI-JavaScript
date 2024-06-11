@@ -62,7 +62,7 @@ function PasswordInputForm() {
     
     // console.log(PswValue)
     if(PswValue.match(pattern)  && PswValue.length < 16){
-        Pswlbl.innerHTML = "Srtong Password".fontcolor("white")
+        Pswlbl.innerHTML = "Strong Password".fontcolor("white")
         ProgressBarFunction("100%", "bg-success" , "Strong Passwrod")
     }
     else {
