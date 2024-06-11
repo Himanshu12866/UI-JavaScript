@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-7 Forward Jump</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js""></script>
+    <style>
+        h1,h3{
+            text-align: center;
+            margin: 10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: auto;
+        }
+        div{
+            width: 500px;
+        }
+        #psw-container{
+            display: none;
+        }
+        #btnlogin{
+            display: none;
+        }
+        #pswData{
+            width: 418px;
+        }
+        @media(max-width:450px){
+            div{
+                width: 400px;
+            }
+            #pswData{
+                width: 370px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1> Login Form</h1>
+    <div class=" card w-100">
+        <div class="card-header">
+          <h3 class="card-title">Welcome Back</h3>
+        </div>
+        <div class="card-body">
+            <label for="" class="form-label">Please Enter Username:</label>
+            <input type="text" onkeyup="InputVerify()" class="form-control" id="InputData">
+            <label for="" class="form-label mt-2" id="lblInput"></label>
+            <div id="psw-container">
+                <label for="" class="form-label mt-2">Enter Your Password:</label>
+                <input  type="password" class="form-control" onkeyup="PswVerify()" id="pswData" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                <label for="" class="form-label mt-2" id="lblPsw"></label>
+            <button class="btn btn-success mt-2" id="btnlogin">Login</button>
+            </div>
+        </div>
+        <div class="card-footer">
+            <h4>Please Follow the rules before login</h4>
+            <ul>
+                <li>Please Enter Your Username First</li>
+                <li>If Username is valid then you will be able to enter password</li>
+                <li>If your Usernaem is not valid then you cannot login</li>
+             
+                <li>Again Your Password will be varify same as Username</li>
+                <li>After varifying your Username and Password, you will be able to login</li>
+            </ul>
+            <p><a href="">Terms & conditions Apply</a></p>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+
+</html>
