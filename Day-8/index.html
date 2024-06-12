@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-8 | Multiple Choices</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+      h3 {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+        height: auto;
+        border: 3px groove #0ef;
+      }
+      .box {
+        width: 400px;
+        margin-top: 40px;
+        height: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Decision Making Statesment | Multiple Choices</h3>
+    <div class="container">
+      <div class="box">
+        <label for="" class="form-label">User Name :</label>
+        <input
+          type="text"
+          class="form-control"
+          onblur="VerifyInput()"
+          id="UserId"
+        />
+        <label for="" class="form-label" id="lblId"></label><br />
+        <div id="psw-box">
+          <label for="" class="form-label">Password :</label>
+          <input
+            type="text"
+            class="form-control"
+            onblur="VerifyPsw()"
+            id="PswId"
+          />
+          <label for="" class="form-label" id="lblPsw"></label>
+          <button class="btn btn-warning mt-4" id="btnlogin">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
