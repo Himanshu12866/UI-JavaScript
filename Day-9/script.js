@@ -41,8 +41,8 @@ function Checkout() {
 
         AcCharge = 1000 * Day;
         document.getElementById("TotalPay").innerHTML = RoomCharge + AcCharge - AdvancePay + "&#8377";
-        document.getElementById("RoomType").innerHTML = " 1 Luxury Room 4000 &#8377 Per Day";
-        document.getElementById("ACType").innerHTML = " 2 AC Charge &#8377 1000 Per Day";
+        document.getElementById("RoomType").innerHTML = " Luxury Room 4000 &#8377 Per Day";
+        document.getElementById("ACType").innerHTML = " AC Charge &#8377 1000 Per Day";
 
     }
     else if (Person <= 2 && (Room.checked || AcRoom.checked)) {
@@ -52,14 +52,14 @@ function Checkout() {
             AcCharge = 1000 * Day;
             document.getElementById("TotalPay").innerHTML = RoomCharge + AcCharge - AdvancePay + "&#8377";
             // document.getElementById("RoomType").innerHTML = "Luxury Room 4000 &#8377 Per Day";
-            document.getElementById("ACType").innerHTML = " 3 A / C Charge &#8377 1000 Per Day";
+            document.getElementById("ACType").innerHTML = " A / C Charge &#8377 1000 Per Day";
         }
-            document.getElementById("ACType").innerHTML = " 4 Non A / C Room";
+            document.getElementById("ACType").innerHTML = " Non A / C Room";
             document.getElementById("TotalPay").innerHTML = RoomCharge  - AdvancePay + "&#8377   2 ";
         if (Room.checked) {
             RoomCharge = 4000 * Day
             // text = "Luxury Room :" + 4000 + " Per Day"
-            document.getElementById("RoomType").innerHTML = " 5 Luxury Room &#8377 Per Day"
+            document.getElementById("RoomType").innerHTML = "Luxury Room &#8377 Per Day"
             document.getElementById("TotalPay").innerHTML = RoomCharge  -AdvancePay + "&#8377"
 
         }
@@ -72,8 +72,8 @@ function Checkout() {
     else if (Person <= 2) {
         RoomCharge = 2400;
         document.getElementById("TotalPay").innerHTML = RoomCharge * Day - AdvancePay + "&#8377";
-        document.getElementById("RoomType").innerHTML = " 6 Affordable Room &#8377 2400 Per Day"
-         document.getElementById("ACType").innerHTML = " 7 Non A / C Room ";
+        document.getElementById("RoomType").innerHTML = " Affordable Room &#8377 2400 Per Day"
+         document.getElementById("ACType").innerHTML = "  Non A / C Room ";
     }
     else if (Person > 2 && Room.checked && AcRoom.checked) {
         RoomCharge = 4000 * Day;
@@ -81,15 +81,15 @@ function Checkout() {
         AcCharge = 1000 * Day;
         document.getElementById("TotalPay").innerHTML = RoomCharge + AcCharge + three - AdvancePay + "&#8377";
         // document.getElementById("TotalPay").innerHTML = RoomCharge + AcCharge - AdvancePay;
-        document.getElementById("RoomType").innerHTML = " 8   Luxury Room 4000 &#8377 Per Day";
-        document.getElementById("ACType").innerHTML = " 9 A / C Charge &#8377 1000 Per Day";
+        document.getElementById("RoomType").innerHTML = "  Luxury Room 4000 &#8377 Per Day";
+        document.getElementById("ACType").innerHTML = "  A / C Charge &#8377 1000 Per Day";
     }
     else if (Person > 2 && (Room.checked || AcRoom.checked)) {
         RoomCharge = 2400 * Day;
         AcCharge = 0
         if (AcRoom.checked) {
             AcCharge = 1000 * Day
-            document.getElementById("ACType").innerHTML = " 10 A / C Charge &#8377 1000 Per Day";
+            document.getElementById("ACType").innerHTML = " A / C Charge &#8377 1000 Per Day";
 
 
         }
@@ -97,7 +97,7 @@ function Checkout() {
         if (Room.checked) {
             RoomCharge = 4000 * Day
 
-            document.getElementById("RoomType").innerHTML = " 11 Luxury Room 4000 &#8377 Per Day";
+            document.getElementById("RoomType").innerHTML = " Luxury Room 4000 &#8377 Per Day";
         }
         document.getElementById("TotalPay").innerHTML = RoomCharge + AcCharge + three - AdvancePay + "&#8377 ";
         // document.getElementById("ACType").innerHTML = " 12 Non A / C Room";
@@ -105,8 +105,8 @@ function Checkout() {
     else if (Person > 2) {
         RoomCharge = 2400;
         document.getElementById("TotalPay").innerHTML = (RoomCharge * Day) + three - AdvancePay + "&#8377";
-        document.getElementById("RoomType").innerHTML = " 13 Affordable Room 2400 &#8377 Per Day";
-        document.getElementById("ACType").innerHTML = " 14 Non A / C Room";
+        document.getElementById("RoomType").innerHTML = "Affordable Room 2400 &#8377 Per Day";
+        document.getElementById("ACType").innerHTML = "Non A / C Room";
 
     }
 
