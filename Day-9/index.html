@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-9 | Hotel Room CheckOut Form</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Hotel Registation Form</h1>
+    <h2>Customer Details</h2>
+    <div class="data-box">
+      <div class="container-box">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h3>Customer Name -</h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="text" class="form-control m-1" id="InputName" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h3>Check In Date -</h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <input
+              type="datetime-local"
+              class="form-control m-1"
+              id="InputDate"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h3>Total No. Of Day -</h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="number" class="form-control m-1" id="InputDay" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h3>Total No. Of Person -</h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="number" class="form-control m-1" id="InputPerson" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Select Room Type</h2>
+
+    <div class="data-box">
+      <div class="container-box">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <img src="../images/deluxroom.jpeg" alt="" />
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <h2>Super Luxury Room</h2>
+            <ul>
+              <li>24/7 Service</li>
+              <li>Free Wifi</li>
+              
+              <li>40% Off</li>
+              <li>Veg/Non Food</li>
+              <li>Balcony</li>
+            </ul>
+            <div class="row">
+              <div class="col-1">
+                <input
+                  type="checkbox"
+                  class="form-check-input m-1"
+                  id="InputDelux"
+                />
+              </div>
+              <div class="col-11">
+                <h4 class="btn btn-success" onclick="CheckInput()">
+                  Select Room Type
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <img src="../images/suitroom.jpeg" alt="" />
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <h2>Affordable Room</h2>
+            <ul>
+              <li>24/7 Service</li>
+              <li>Free Wifi</li>
+              
+              <li>Veg Food</li>
+              <li>20% Off</li>
+            </ul>
+            <div class="row">
+              <div class="col-1">
+                <input
+                  type="checkbox"
+                  class="form-check-input m-1"
+                  id="InputSuit"
+                />
+              </div>
+              <div class="col-11">
+                <h4 class="btn btn-primary" onclick="CheckInpuT()">
+                  Select Room Type
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<h2>Select Amenities</h2>
+
+<div class="data-box">
+    <div class="container-box">
+<div class="row">
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-1">
+                <input type="checkbox" class="form-check-input" id="CheckBoxAC">
+            </div>
+            <div class="col-11">
+                <h4 class="btn btn-warning w-100" onclick="CheckAc()">A / C Room</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-1">
+                <input type="checkbox" class="form-check-input" id="CheckBoxNonAC">
+            </div>
+            <div class="col-11">
+                <h4 class="btn btn-warning w-100" onclick="CheckAC()">Non A/C Room</h4>
+            </div>
+        </div>
+    </div>
+</div>
+    </div></div>
+
+    <div class="data-box">
+        <div class="container-box">
+            <div class="row">
+                <div class="col-lg-6"><h2>Advance Amount</h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                    <input type="number" class="form-control" id="AdvanceAmount">
+                    <span class="input-group-text"> &#8377;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 onclick="Checkout()">Checkout</h2>
+    <div class="data-box">
+        <div class="container-box">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Customer Name -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+   <h3 id="CustomerName"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Check In Date -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <h3 id="CustomerDate"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Total No. Of Day -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3 id="CustomerDay"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Total No. Of Person -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3 id="CustomerPerson"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Selected Room Type -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3 id="RoomType"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h3>Selected Amenities -</h3>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3 id="ACType"></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h2>Total Amount</h2>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3 id="TotalPay"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>
