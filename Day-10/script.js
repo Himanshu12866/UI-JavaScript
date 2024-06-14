@@ -30,10 +30,21 @@ function Checkout() {
     document.getElementById("CustomerName").innerHTML = Name;
     document.getElementById("CustomerDate").innerHTML = CustomerDate;
     document.getElementById("CustomerDay").innerHTML = Day;
+   
+
+
+    if(Name==""  || CustomerDate == "" || Day == "" || Person =="" || AdvancePay == ""){
+        alert("Please Fill The Datails First and Advance Amount To Book Hotel Room")
+        document.getElementById("TotalPay").innerHTML = "Pay Advance Amount".fontcolor("red")
+        return ;
+       
+    }
+
     document.getElementById("CustomerPerson").innerHTML = ExtraPerson;
 
     switch (true) {
-        case (Person <= 2 && Room.checked && AcRoom.checked):
+        case (Person <= 2 && Room.checked && AcRoom.checked || AdvancePay == ""):
+            document.getElementById("TotalPay").innerHTML = "Pay Advance Amount".fontcolor("red")
             document.getElementById("TotalPay").innerHTML = (4000 + 1000 - AdvancePay) * Day + "&#8377";
             Name.innerHTML = Name;
             CustomerDate.innerHTML = CustomerDate;
@@ -108,3 +119,4 @@ function Checkout() {
     }
 
 }
+
