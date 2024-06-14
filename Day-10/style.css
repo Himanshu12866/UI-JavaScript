@@ -1,0 +1,70 @@
+*{
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    border: 2px double grey;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+}
+.data-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 2px solid grey;
+    position: relative;
+
+}
+.data-box .container-box{
+    width: 80%;
+}
+.data-box .container-box .row{
+    width: 100%;
+}
+.data-box .container-box .row .col-lg-6 img{
+    width: 100%;
+    height: 250px;
+  padding: 10px;
+}
+.data-box .container-box .row .col-lg-6 {
+    padding: 10px;
+}
+/* .form-check-input{
+    margin-left: 30px;
+    margin-top: 30px;
+} */
+ .input-group{
+    margin: 6px;
+
+ }
+
+.col-lg-6 div span{
+    font-size: 25px;
+    
+}
+ul li {
+    font-size: 20px;
+}
+ h5{
+    font-size:20px;
+    padding: -5px;
+    margin: -5px;
+    color: grey;
+}
+
+#TotalPay{
+    padding: 10px;
+    color: red;
+    font-style: italic;
+    font-family: serif;
+}
