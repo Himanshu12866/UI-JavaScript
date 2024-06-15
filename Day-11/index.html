@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAY-11 | Javascript Task(Comparison)</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      body {
+        overflow: hidden;
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        background-color: black;
+        color: white;
+        padding: 5px;
+      }
+      .values {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      #result-block {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Comparing a three triangle values:</h1>
+
+    <div class="values">
+      <div class="container-box">
+        <div class="row my-2 p-2">
+          <div class="col-lg-6 col-sm-12">Enter 1st Value of Triangel :</div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="number" id="val1" class="form-control" required />
+          </div>
+        </div>
+        <div class="row my-2 p-2">
+          <div class="col-lg-6 col-sm-12">Enter 2nd Value of Triangel :</div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="number" id="val2" class="form-control" required />
+          </div>
+        </div>
+        <div class="row mt-2 p-2">
+          <div class="col-lg-6 col-sm-12">Enter 3rd Value of Triangel :</div>
+          <div class="col-lg-6 col-sm-12">
+            <input type="number" id="val3" class="form-control" required />
+          </div>
+        </div>
+        <button class="btn btn-dark mt-2 w-100" onclick="ResultBtn()">
+          Calculate
+        </button>
+
+        <div class="row mt-2" id="result-block">
+          <div class="col-lg-6 col-sm-12">
+            <h3>Triangel Type is :</h3>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <h3 id="Result"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
