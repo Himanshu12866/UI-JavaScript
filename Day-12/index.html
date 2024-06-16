@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hover {
+        overflow: hidden;
+      }
+      /*Animate overlay and move it 'above'*/
+      .hover .overlay {
+        transform: translate3d(-100%, 0, 0);
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* Mouse enter event */
+      .hover.mouseenter.top .overlay {
+        animation-name: slide--enter-top;
+      }
+      .hover.mouseenter.right .overlay {
+        animation-name: slide--enter-right;
+      }
+      .hover.mouseenter.bottom .overlay {
+        animation-name: slide--enter-bottom;
+      }
+      .hover.mouseenter.left .overlay {
+        animation-name: slide--enter-left;
+      }
+
+      /* Mouse leave event */
+      .hover.mouseleave.top .overlay {
+        animation-name: slide--leave-top;
+      }
+      .hover.mouseleave.right .overlay {
+        animation-name: slide--leave-right;
+      }
+      .hover.mouseleave.bottom .overlay {
+        animation-name: slide--leave-bottom;
+      }
+      .hover.mouseleave.left .overlay {
+        animation-name: slide--leave-left;
+      }
+
+      /* Sliding animations ! */
+      @keyframes slide--enter-top {
+        0% {
+          transform: translate3d(0, -100%, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes slide--enter-right {
+        0% {
+          transform: translate3d(100%, 0, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes slide--enter-bottom {
+        0% {
+          transform: translate3d(0, 100%, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes slide--enter-left {
+        0% {
+          transform: translate3d(-100%, 0, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes slide--leave-top {
+        0% {
+          transform: none;
+        }
+        100% {
+          transform: translate3d(0, -100%, 0);
+        }
+      }
+      @keyframes slide--leave-right {
+        0% {
+          transform: none;
+        }
+        100% {
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+      @keyframes slide--leave-bottom {
+        0% {
+          transform: none;
+        }
+        100% {
+          transform: translate3d(0, 100%, 0);
+        }
+      }
+      @keyframes slide--leave-left {
+        0% {
+          transform: none;
+        }
+        100% {
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+
+      /**
+ * BASIC CSS FOR DEMO PURPOSE
+ */
+      body {
+        font-family: system-ui;
+        background: #f06d06;
+        color: white;
+        text-align: center;
+      }
+      .layout {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .hover {
+        background-color: #4472c4;
+        position: relative;
+        display: flex;
+        flex: 1 1 30%;
+        margin: 1%;
+        height: 150px;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .content {
+        flex: 1;
+        text-align: center;
+      }
+
+      .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #f08080;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="hover">
+        <div class="content">Item 1</div>
+        <div class="overlay"></div>
+      </div>
+      <div class="hover">
+        <div class="content">Item 2</div>
+        <div class="overlay"></div>
+      </div>
+      <div class="hover">
+        <div class="content">Item 3</div>
+        <div class="overlay"></div>
+      </div>
+      <div class="hover">
+        <div class="content">Item 4</div>
+        <div class="overlay"></div>
+      </div>
+      <div class="hover">
+        <div class="content">Item 5</div>
+        <div class="overlay"></div>
+      </div>
+      <div class="hover">
+        <div class="content">Item 6</div>
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <script>
+     
+    </script>
+  </body>
+</html>
