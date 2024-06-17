@@ -2,15 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-
   margin: 0 auto;
-  height: 100vh;
   flex-wrap: wrap;
 }
 .hover {
   flex: 1 1 30%;
   display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   height: 150px;
   position: relative;
