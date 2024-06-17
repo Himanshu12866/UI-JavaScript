@@ -1,9 +1,13 @@
 .layout {
-  width: 100%;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   flex-wrap: wrap;
+}
+body{
+    text-align: center;
+    background-color: gold;
 }
 .hover {
   flex: 1 1 30%;
