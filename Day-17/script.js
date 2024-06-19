@@ -1,6 +1,6 @@
 function ClickeMe() {
     document.querySelector("div").innerHTML = `
-     <table style = "border:1px solid red; color:white; background-color:red; margin-top: 20px">
+     <table style = "border:1px solid red; background-color:red; margin-top: 20px">
 
         <thead>
            <tr>
