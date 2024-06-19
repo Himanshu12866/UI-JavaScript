@@ -19,6 +19,11 @@ function ClickBtn() {
 
 
     // Table Header has been created 
+
+    // Now lets create the body of the table 
+
+
+    
     var tbody = document.createElement("tbody");
     var tr_2 = document.createElement("tr");
     var td = document.createElement("td");
