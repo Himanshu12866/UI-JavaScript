@@ -1,13 +1,18 @@
 function ClickBtn() {
     document.querySelector("div").innerHTML = "";
     var table = document.createElement("table");
-    table.border = "1";
+  table.style.border = "2px solid red"
     table.style.backgroundColor = "grey";
     table.style.color = "white";
-    table.style.outline = "1px solid green"
+    table.style.width = "300px";
+    table.style.textAlign = "left"
+    table.style.marginTop = "20px"
+    table.style.borderRadius = "5px"
+
     var thead_1 = document.createElement("thead");
     var tr_1 = document.createElement("tr");
     var th_1 = document.createElement("th");
+    th_1.style.borderBottom = "2px solid yellow"
     th_1.innerHTML = "Name";
     var th_2 = document.createElement("th");
     th_2.innerHTML = "Age";
@@ -23,7 +28,7 @@ function ClickBtn() {
     // Now lets create the body of the table 
 
 
-    
+
     var tbody = document.createElement("tbody");
     var tr_2 = document.createElement("tr");
     var td = document.createElement("td");
