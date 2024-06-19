@@ -1,7 +1,7 @@
 function ClickBtn() {
     document.querySelector("div").innerHTML = "";
     var table = document.createElement("table");
-  table.style.border = "2px solid red"
+    table.style.border = "2px solid red"
     table.style.backgroundColor = "grey";
     table.style.color = "white";
     table.style.width = "300px";
