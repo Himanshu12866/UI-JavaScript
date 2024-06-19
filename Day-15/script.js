@@ -1,6 +1,9 @@
 function ClickBtn(){
     var table =  document.createElement("table");
     table.border = "1";
+    table.style.backgroundColor = "grey";
+    table.style.color = "white";
+    table.style.outline = "1px solid green"
     var thead = document.createElement("thead");
     var  tr_1 = document.createElement("tr");
     var th = document.createElement("th");
