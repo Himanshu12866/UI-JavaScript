@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-18 | Creating A To Do List</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+    <style>
+      h1 {
+        text-align: center;
+        background-color: rgb(16, 222, 222);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        color: black;
+      }
+      .box {
+        margin: 10px;
+      }
+  
+    </style>
+  </head>
+  <body onload="LoadList()">
+    <h1>Add Your Daily Task here</h1>
+    <div class="box">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          id="InputWrite"
+          placeholder="Add Your Daily Task Here"
+        />
+        <button class="input-group-text btn-dark" onclick="BtnAdd()">Add</button>
+    </div>
+    <select name="list" size="10" id="SelectList" class="form-select mt-3"></select>
+    <label for="" id="LengthOfList"></label>
+    </div>
+  </body>
 </html>
