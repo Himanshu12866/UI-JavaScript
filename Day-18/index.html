@@ -45,7 +45,10 @@
         <button class="input-group-text btn-dark" onclick="BtnAdd()">Add</button>
     </div>
     <select name="list" size="10" id="SelectList" class="form-select mt-3"></select>
-    <label for="" id="LengthOfList"></label>
+    <label for="" class="my-1" id="LengthOfList"></label>
+   <button class="btn btn-dark my-1" onclick="SortList()"><i class="bi bi-sort-alpha-down"></i></button>
+   <button class="btn text-bg-warning my-1" onclick="ReverseList()"><span class="bi bi-sort-alpha-up-alt"></span></button>
+   <button class="btn btn-danger my-1" onclick="RemoveItem()"><i class=" bi bi-trash-fill"></i></button>
     </div>
   </body>
 </html>
