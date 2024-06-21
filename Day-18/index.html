@@ -8,10 +8,7 @@
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.css"
     />
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -20,21 +17,54 @@
     <style>
       h1 {
         text-align: center;
-        background-color: rgb(16, 222, 222);
+        background-color: rgb(222, 195, 16);
         padding: 10px;
         border-radius: 10px;
         margin: 10px;
         color: black;
+        font-size: 25px;
       }
       .box {
         margin: 10px;
+        width: 80%;
       }
-  
+      body {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: rgba(5, 41, 67, 0.859);
+      }
+      select {
+        background-color: rgb(169, 65, 188) !important;
+        color: white;
+        padding: 10px !important;
+      }
+      input {
+        background-color: rgb(16, 222, 133) !important;
+        color: white !important;
+      }
+      ::placeholder {
+        color: white !important;
+      }
+      .input-group-text {
+        background-color: green !important;
+        color: white !important;
+      }
+      option {
+        color: white !important;
+        padding: 10px !important;
+      }
+      .btnBox{
+        display: flex;
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body onload="LoadList()">
-    <h1>Add Your Daily Task here</h1>
     <div class="box">
+      <h1>Add Your Daily Task here</h1>
       <div class="input-group">
         <input
           type="text"
@@ -42,25 +72,62 @@
           id="InputWrite"
           placeholder="Add Your Daily Task Here"
         />
-        <button class="input-group-text btn-dark" onclick="BtnAdd()">Add</button>
-    </div>
-    <select name="list" size="10" id="SelectList" class="form-select mt-3"></select>
-    <label for="" class="my-1" id="LengthOfList"></label>
-   <button class="btn btn-dark my-1" onclick="SortList()"><i class="bi bi-sort-alpha-down"></i></button>
-   <button class="btn text-bg-warning my-1" onclick="ReverseList()"><span class="bi bi-sort-alpha-up-alt"></span></button>
-   <button class="btn btn-danger my-1" onclick="RemoveItem()"><i class=" bi bi-trash-fill"></i></button>
-   <button class="btn btn-dark text-white my-1" data-bs-target="#box1" data-bs-toggle="modal">Click Me</button>
-   <div class="modal" id="box1">
-     <div class="modal-dialog modal-dialog-centered">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h2>Please Edit Task </h2>
-           <button class="btn btn-close"></button>
-         </div>
-       </div>
+        <button class="input-group-text btn-dark" title="Add" onclick="BtnAdd()">
+          <i class="bi bi-bookmark-plus-fill"></i>
+        </button>
+      </div>
+      <select
+        name="list"
+        size="6"
+        id="SelectList"
+        class="form-select mt-3"
+      ></select>
+     <div class="btnBox">
+      <label for="" class="my-1 text-light w-25" id="LengthOfList"></label>
+      <button class="btn btn-dark my-1 w-25" title="Sort List" onclick="SortList()">
+        <i class="bi bi-sort-alpha-down"></i>
+      </button>
+      <button class="btn text-bg-warning my-1 w-25" title="Reverse Order" onclick="ReverseList()">
+        <span class="bi bi-sort-alpha-up-alt"></span>
+      </button>
+      <button class="btn btn-danger my-1 w-25" title="Delete Task" onclick="RemoveItem()">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+      <button
+        class="btn btn-dark text-white my-1 w-25"
+        onclick="EditTask()"
+        data-bs-target="#box1"
+        data-bs-toggle="modal"
+        title="Edit Task"
+      >
+        <span class="bi bi-pen-fill"></span>
+      </button>
      </div>
-   </div>
+      <div class="modal" id="box1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Please Edit Task</h2>
+              <button class="btn btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <input
+                type="text"
+                class="form-control"
+                id="InputEdit"
+                placeholder="Please Select the task to edit"
+              />
+              <button
+                class="btn btn-dark my-2 w-100"
+                onclick="SaveEdit()"
+                data-bs-dismiss="modal"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
   </body>
 </html>

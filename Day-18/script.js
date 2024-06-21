@@ -1,31 +1,4 @@
 
-// var ListItem = [];
-
-
-// function LoadList() {
-
-//     document.getElementById("SelectList").innerHTML = ""
-//     ListItem.map(function (item) {
-//         var OptionBtn = document.createElement("option");
-//         OptionBtn.text = item;
-//         OptionBtn.value = item;
-//         document.getElementById("SelectList").appendChild(OptionBtn)
-//     })
-//     document.getElementById("LengthOfList").innerHTML = "Total Task: " + ListItem.length
-// }
-
-
-// function BtnAdd() {
-//     let addingItem = document.getElementById("InputWrite").value;
-//     if (ListItem.indexOf(addingItem) == -1) {
-//         ListItem.push(addingItem);
-//         document.getElementById("InputWrite").value = ""
-//         LoadList();
-//     }
-//     else{
-//         alert("Task already exist")
-//     }
-// }
 
 var List = ["Wake Up"];
 function LoadList() {
@@ -66,8 +39,13 @@ function SortList() {
     }
 }
 function ReverseList() {
-    List.reverse()
-    LoadList()
+    if (List.length > 2) {
+        List.reverse()
+        LoadList()
+    }
+    else {
+        alert("Please Add task to Reverse")
+    }
 }
 
 function RemoveItem() {
@@ -81,4 +59,16 @@ function RemoveItem() {
         alert("Task Deleted Successfully")
         LoadList()
     }
+}
+function EditTask() {
+    var SelectItem = document.getElementById("SelectList").value;
+    document.getElementById("InputEdit").value = SelectItem;
+}
+function SaveEdit() {
+    var EditedTask = document.getElementById("InputEdit").value
+    console.log(EditedTask)
+    var NewTask = List.indexOf(document.getElementById("SelectList").value)
+    List[NewTask] = EditedTask;
+    alert("Task Edited Successfully")
+    LoadList()
 }
