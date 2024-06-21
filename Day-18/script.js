@@ -41,14 +41,17 @@ function LoadList() {
 
 function BtnAdd() {
     var AddItem = document.getElementById("InputWrite").value;
-    if (List.indexOf(AddItem) == -1) {
+    if (AddItem == "") {
+        alert("Please Item to add")
+        document.getElementById("InputWrite").value = ""
+    }
+    else if (List.indexOf(AddItem) == -1) {
         List.push(AddItem);
-        alert("Tast Added Succefully")
+        alert("Task Added Succefully")
         document.getElementById("InputWrite").value = ""
     }
     else {
         alert("Already Tast Exits")
-        document.getElementById("InputWrite").value = ""
     }
     LoadList()
 }
