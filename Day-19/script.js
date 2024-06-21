@@ -1,4 +1,4 @@
-document.getElementById("ImageId").style.display = "none";
+
 
 
 function ClickMe(){
@@ -10,6 +10,9 @@ function ClickMe(){
        
         if(http.readyState == 4){
             product = JSON.parse(http.responseText);
+            document.getElementById("ImageId").src = product.image;
+            document.getElementById("TitleId").innerHTML = product.title;
+            document.getElementById("DescpId").innerHTML = product.description;
         }
      }
 }
