@@ -1,0 +1,17 @@
+{
+    "title" : "Apple Iphone 15 (Black , 128GB )",
+    "price" : 79999,
+    "rating" : {
+        "rate" : 4.5,
+        "ratings" : 2035,
+        "reviews" : 1000
+    },
+    "offers" : [
+        "Bank Offer Axix  Credit CardBank 10% Off",
+        "Bank Offer HDFC Credit Cars Bank 15% Off",
+        "Bank Offer ICICI Credit Card Bank 20% Off",
+        "20% Off on Exchange"
+    ],
+    "description" : "Apple iPhone 15 (Black, 128GB) is a powerful phone which will fullfill all your need ",
+    "image" : "../images/iphone.jpg"
+}
