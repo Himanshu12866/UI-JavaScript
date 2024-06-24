@@ -26,4 +26,10 @@ function LoadData() {
                 document.querySelector("main").appendChild(div)
             })
         })
+        .catch(function(){
+            alert("Something Went Wrong")
+        })
+        .finally(function(){
+            alert("Fetch Data Successfully")
+        })
 }
