@@ -4,7 +4,8 @@ function LoadTable(){
         return response.json()
     })
     .then(function(data){
-    data.map(function(table, index){
+        document.querySelector("tbody").innerHTML = ""
+        data.map(function(table, index){
         var tr = document.createElement("tr")
         var tcountry = document.createElement("td")
         var id = document.createElement("td")
