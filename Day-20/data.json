@@ -1,0 +1,17 @@
+{
+    "title": "Apple Iphone 15 (Black, 128GB)",
+    "desc" : "Apple Iphone is the high perofrmance gaming phone",
+    "price": 72222,
+    "rating": {
+        "rate": 4.5,
+        "ratings" : 2330,
+        "count": 200
+    },
+    "offers" : [
+        "Bank Offer 1",
+        "Bank Offer 1",
+        "Bank Offer 1",
+        "Bank Offer 1"
+    ],
+    "images": "./images/iphone.jpeg"
+}
