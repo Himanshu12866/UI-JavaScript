@@ -13,5 +13,5 @@
         "Bank Offer 1",
         "Bank Offer 1"
     ],
-    "images": "./images/iphone.jpeg"
+    "images": "../images/iphone.jpeg"
 }
