@@ -27,14 +27,14 @@ function FetchAPI(url) {
             
             
             <span> ${data.category}</span><br>
-            <span><b> ${data.price}</b></span><br>
+            <span><b>$  ${data.price}</b></span><br>
           <span class="bi bi-star-fill"></span> ${data.rating.rate} Ratings & ${data.rating.count} Reviews</span>
 
 
 
             </div>
             <div class = "card-footer">
-            <button class="btn btn-dark w-100">Add to Cart</button>  
+            <button onclick="AddItem(${data.id})" class="btn btn-dark w-100">Add to Cart</button>  
             </div>
          </div> 
          `
@@ -43,14 +43,57 @@ function FetchAPI(url) {
         })
 }
 
-var cardItem = []
+var cardItem = [];
+var TotalCost = 0
 function GetCount(){
     document.getElementById("count").innerHTML = cardItem.length
+}
+
+function AddItem(id){
+
+  
+    fetch(`https://fakestoreapi.com/products/${id}`)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function(data){
+        TotalCost += data.price
+        cardItem.push(data);
+        alert("Added To Cart")
+        GetCount()
+    })
+
+}
+
+function VeiwCard(){
+    if(cardItem.length == 0){
+        alert("Your Card is empty")
+    }
+    document.getElementById("tbody").innerHTML = "";
+    document.getElementById("total").innerHTML = "$" + TotalCost.toFixed(2)
+    cardItem.map(function(detail){
+        console.log(detail)
+        var tr = document.createElement("tr")
+        var td_1 = document.createElement("td")
+        var td_2 = document.createElement("td")
+        var td_3 = document.createElement("td")
+        
+
+        td_1.innerHTML = detail.title;
+        td_2.innerHTML = `<img style="width:50px; height:50px;" src = ${detail.image}>`;
+        td_3.innerHTML = `$ ${detail.price} `;
+        tr.appendChild(td_1)
+        tr.appendChild(td_2)
+        tr.appendChild(td_3)
+        document.getElementById("tbody").appendChild(tr)
+        
+    })
 }
 
 
 
 function LoadData() {
     FetchAPI('https://fakestoreapi.com/products')
-    GetCount()
+    GetCount();
+    
 }
