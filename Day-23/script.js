@@ -43,9 +43,14 @@ function FetchAPI(url) {
         })
 }
 
+var cardItem = []
+function GetCount(){
+    document.getElementById("count").innerHTML = cardItem.length
+}
 
 
 
 function LoadData() {
     FetchAPI('https://fakestoreapi.com/products')
+    GetCount()
 }
