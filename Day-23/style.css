@@ -13,3 +13,10 @@
     align-items: center;
     padding: 10px;
 }
+footer{
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

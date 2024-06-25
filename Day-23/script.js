@@ -26,7 +26,7 @@ function FetchAPI(url) {
             <div class = "card-body">
             
             
-            <span> ${data.category}</span><br>
+            <span> ${data.category.toUpperCase()}</span><br>
             <span><b>$  ${data.price}</b></span><br>
           <span class="bi bi-star-fill"></span> ${data.rating.rate} Ratings & ${data.rating.count} Reviews</span>
 
