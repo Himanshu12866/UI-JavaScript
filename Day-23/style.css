@@ -1,0 +1,15 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+.main-section{
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

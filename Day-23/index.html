@@ -14,10 +14,11 @@
     />
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
-  <body>
+  <body onload="LoadData()">
     <nav class="navbar m-3 navbar-expand-sm">
-      <a href="" class="navbar-brand fw-bold fs-2 p-2 ms-4"> Shopper </a>
+      <a href="" class="navbar-brand fw-bold fs-2 p-2 ms-4"> Shopper. </a>
       <button
         class="navbar-toggler"
         data-bs-toggle="collapse"
@@ -31,20 +32,21 @@
       >
         <ul class="navbar-nav">
           <li class="nav=item">
-            <a href="" class="ms-2 fw-bold nav-link">Home</a>
+            <a href="javascript:FetchAPI('https://fakestoreapi.com/products')" class="ms-2 fw-bold nav-link">Home</a>
           </li>
           <li class="nav=item">
-            <a href="" class="ms-2 fw-bold nav-link">Electronics</a>
+            <a href="javascript:FetchAPI('https://fakestoreapi.com/products/category/electronics')" class="ms-2 fw-bold nav-link">Electronics</a>
           </li>
           <li class="nav=item">
-            <a href="" class="ms-2 fw-bold nav-link">Jewelary</a>
+            <a href="javascript:FetchAPI('https://fakestoreapi.com/products/category/jewelery')" class="ms-2 fw-bold nav-link">Jewelary</a>
           </li>
           <li class="nav=item">
-            <a href="" class="ms-2 fw-bold nav-link">Men's Clothing</a>
+            <a href="javascript:FetchAPI('men')" class="ms-2 fw-bold nav-link">Men's Clothing</a>
           </li>
           <li class="nav=item">
-            <a href="" class="ms-2 fw-bold nav-link">Women's Clothing</a>
+            <a href="javascript:FetchAPI('women')" class="ms-2 fw-bold nav-link">Women's Clothing</a>
           </li>
+                    
         </ul>
         <div class="cart">
           <button class="btn btn-dark position-relative">
@@ -58,5 +60,13 @@
         </div>
       </div>
     </nav>
+
+   <section class="section">
+    <main class="main-section d-flex flex-wrap gap-3 " id="product">
+
+    </main>
+   </section>
+
+
   </body>
 </html>
