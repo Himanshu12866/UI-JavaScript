@@ -43,11 +43,20 @@ function FetchAPI(url) {
         })
 }
 
-var cardItem = [];
+var cardItem = [];  // Create a empty array to add items when user clicks th add to cart button
+
+// ---------------------------
 var TotalCost = 0
+
+
 function GetCount() {
     document.getElementById("count").innerHTML = cardItem.length
+
 }
+
+// ---------------------------
+
+
 
 function AddItem(id) {
 
@@ -69,13 +78,18 @@ function VeiwCard() {
     if (cardItem.length == 0) {
         alert("Your Card is empty")
     }
+
+
+
     document.getElementById("tbody").innerHTML = "";
     document.getElementById("total").innerHTML = "$" + TotalCost.toFixed(2)
     cardItem.map(function (detail) {
-        console.log(detail)
+      
+
+        // Create a delete button
         var btn = document.createElement("button")
-        btn.innerHTML = 'Delete';
-        btn.className = "btn btn-danger"
+       
+        btn.className = "btn btn-danger bi bi-trash"
         btn.addEventListener('click', function () {
             cardItem = cardItem.filter(item => item.id !== detail.id);
             alert("Your Item is removed from the cart")
@@ -85,6 +99,8 @@ function VeiwCard() {
             GetCount()
 
         })
+
+        // Create a table element 
 
         var tr = document.createElement("tr")
         var td_1 = document.createElement("td")
