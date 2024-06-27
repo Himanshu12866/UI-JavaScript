@@ -7,3 +7,10 @@ function msg2(){
 function msg3(){
     alert("Thnak You Visit Again")
 }
+function bodyLoad(){
+  setTimeout(msg1, 3000);
+  setTimeout(msg2, 8000);
+  setTimeout(msg3, 20000);
+
+}
+clearInterval(msg2new)
