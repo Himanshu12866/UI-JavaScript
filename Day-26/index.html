@@ -22,17 +22,17 @@
         align-items: center;
       }
       .card {
-        width: 60%;
+        width: 50%;
         margin: auto;
         margin-top: 30px;
       }
     </style>
   </head>
-  <body onload="LoadProduct()">
+  <body onload="LoadProduct(1)">
     <div class="caontainer">
       <div class="card">
-        <div class="card-header">
-          <div id="ImgTitle"></div>
+        <div class="card-header text-center p-2">
+          <div id="lblTitle"></div>
           <div id="lblStatus"></div>
         </div>
 
@@ -42,7 +42,7 @@
               <button onclick="PrevClick()" class="btn btn-primary bi bi-chevron-left"></button>
             </div>
             <div class="col-8 text-center">
-              <img id="PeoductImg" width="100%" height="300px" />
+              <img id="imgProduct" width="100%" height="300px" />
             </div>
             <div class="col-2 d-flex justify-content-center align-items-center">
               <button onclick="NextClick()" class="btn btn-primary bi bi-chevron-right"></button>
