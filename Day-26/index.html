@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-26 | Create a Image Slider Using Javascript</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="script.js"></script>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 60%;
+        margin: auto;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body onload="LoadProduct()">
+    <div class="caontainer">
+      <div class="card">
+        <div class="card-header">
+          <div id="ImgTitle"></div>
+          <div id="lblStatus"></div>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2 d-flex justify-content-center align-items-center">
+              <button onclick="PrevClick()" class="btn btn-primary bi bi-chevron-left"></button>
+            </div>
+            <div class="col-8 text-center">
+              <img id="PeoductImg" width="100%" height="300px" />
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+              <button onclick="NextClick()" class="btn btn-primary bi bi-chevron-right"></button>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <button onclick="PlayBtn()" class="btn btn-danger w-25 bi bi-play"></button>
+            <button onclick="PauseBtn()" class="btn btn-warning w-25 bi bi-pause"></button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
