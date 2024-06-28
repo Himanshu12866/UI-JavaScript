@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-27 | Adding Animation Dynamically in HTML</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="script.js"></script>
+    <style>
+        @keyframes ZoomIn {
+            from{
+                transform: scale(0) rotate(0deg);
+            }
+            to{
+                transform: scale(1.5) rotate(360deg);
+            }
+            
+        }
+    </style>
+  </head>
+  <body
+    class="container-fluid d-flex justify-content-center align-items-center"
+    style="height: 100vh"
+  >
+    <div>
+      <div id="btnContainer" class="text-center">
+        <button class="btn btn-primary" onclick="LoadClick()">
+          Load Image
+        </button>
+      </div>
+      <div id="progressContainer" class="text-center" style="display: none">
+        <progress
+          min="1"
+          max="100"
+          style="width: 300px; height: 30px"
+          value="1"
+          id="progressBar"
+        ></progress>
+        <div id="lblStatus" class="mt-2"></div>
+        <div class="mt-2" id="BtnBox">
+          <button
+            onclick="PlayClick()"
+            class="btn btn-success bi bi-play"
+          ></button>
+          <button
+            onclick="PauseClick()"
+            class="btn btn-danger bi bi-pause"
+          ></button>
+        </div>
+      </div>
+      <div id="imgContainer" class="text-center" style="display: none">
+        <img
+          src="../images/shopping.png"
+          width="300"
+          height="300"
+        />
+      </div>
+    </div>
+  </body>
+</html>
