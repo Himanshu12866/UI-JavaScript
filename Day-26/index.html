@@ -25,6 +25,7 @@
         width: 50%;
         margin: auto;
         margin-top: 30px;
+        height: 500px;
       }
     </style>
   </head>
@@ -42,7 +43,10 @@
               <button onclick="PrevClick()" class="btn btn-primary bi bi-chevron-left"></button>
             </div>
             <div class="col-8 text-center">
-              <img id="imgProduct" width="100%" height="300px" />
+              <img id="imgProduct" width="100%" height="320px" />
+              <div>
+                <input type="range" class="form-range" onchange=" SeekBarChange()" id="SeekBar" value="1" min="1" max="20">
+              </div>
             </div>
             <div class="col-2 d-flex justify-content-center align-items-center">
               <button onclick="NextClick()" class="btn btn-primary bi bi-chevron-right"></button>
