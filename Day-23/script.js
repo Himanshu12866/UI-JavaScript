@@ -28,7 +28,7 @@ function FetchAPI(url) {
             
             <span> ${data.category.toUpperCase()}</span><br>
             <span><b>$  ${data.price}</b></span><br>
-          <span class="bi bi-star-fill"></span> ${data.rating.rate} Ratings & ${data.rating.count} Reviews</span>
+          <span class="bi bi-star-fill"></span><span> ${data.rating.rate} Ratings & ${data.rating.count} Reviews</span>
 
 
 
