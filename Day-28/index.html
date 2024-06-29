@@ -9,7 +9,76 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
-    
+<body onload="LoadData()">
+    <nav class="navbar navbar-expand-sm m-3">
+        <a href="" class="navbar-brand fw-bold">Shopper.</a>
+        <button class="navbar-toggler fw-bold" data-bs-target="#listnav" data-bs-toggle="collapse">
+            <span class="bi bi-list fw-bold"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="listnav">
+            <ul class="navbar-nav">
+               <li class="nav-item"> 
+                <a href="javascript:FetchAPI('https://fakestoreapi.com/products')" class="nav-link">HOME</a>
+               </li>
+               <li class="nav-item"> 
+                <a href="javascript:FetchAPI('https://fakestoreapi.com/products/category/electronics')" class="nav-link">Electronics</a>
+               </li>
+               <li class="nav-item"> 
+                <a href="javascript:FetchAPI('https://fakestoreapi.com/products/category/jewelery')" class="nav-link">Jewelary</a>
+               </li>
+               <li class="nav-item"> 
+                <a href="javascript:FetchAPI('men')" class="nav-link">Men's Clothing</a>
+               </li>
+               <li class="nav-item"> 
+                <a href="javascript:FetchAPI('women')" class="nav-link">Women's Clothing</a>
+               </li>
+               <li class="nav-item">
+                
+                   <button class="btn btn-dark bi bi-cart3" onclick="ViewCard()" data-bs-target="#modal-box" data-bs-toggle="modal">
+                    <span class="badge bg-warning rounded rounded-circle" id="cardLength"></span>
+                   </button>
+               
+               </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="modal fade" id="modal-box">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You Cart Items</h5>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Image</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">Total</th>
+                                <th id="TotalCost"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+        <main class="main-section d-flex justify-content-between flex-wrap m-4 p-2"  id="products"></main>
+
 </body>
 </html>

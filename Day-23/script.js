@@ -50,7 +50,7 @@ var TotalCost = 0
 
 
 function GetCount() {
-    document.getElementById("count").innerHTML = cardItem.length
+    document.getElementById("count").innerHTML = cardItem.length;
 
 }
 
