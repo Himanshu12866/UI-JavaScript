@@ -67,7 +67,11 @@ function ViewCard(){
     document.querySelector("tbody").innerHTML = "";
     if(CartItem.length == 0){
         alert("No Items in Cart")
+        TotalCost = 0;
+        document.getElementById("TotalCost").innerHTML = " &#8377; " + TotalCost;
+        return 
     }
+
 
     CartItem.map(list => {
         var btn =document.createElement("button");
@@ -76,7 +80,7 @@ function ViewCard(){
          CartItem = CartItem.filter(item => item.id !== list.id)
          alert("Item removed from the cart")
          var BtnPrice = TotalCost - list.price 
-         TotalCost = BtnPrice;
+         TotalCost = BtnPrice.toFixed(2);
          ViewCard();
          GetCount();
  
