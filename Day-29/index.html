@@ -18,13 +18,28 @@
      img{
         width: 200px;
         height: 200px;
+       
      }
+
+     @keyframes slide {
+      from{
+         transform: translateX(-100%);
+      }
+      to{
+         transform: translateX(100%);
+      }
+      
+     }
+
+
+     
     </style>
 </head>
 <body onload="AutoScroll()">
    <header>
     <img id="image">
    </header>
+   <button onclick="Auto()"></button>
 
 </body>
 </html>
