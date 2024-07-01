@@ -1,6 +1,6 @@
 function LoadProductAuto() {
     productId++;
-    fetch(`https://fakestoreapi.com/products/${productIt}`)
+    fetch(`https://fakestoreapi.com/products/${productId}`)
         .then(response => {
             return response.json();
         })
