@@ -20,7 +20,7 @@ flex-basis: 100%;
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .dot {
   position: absolute;

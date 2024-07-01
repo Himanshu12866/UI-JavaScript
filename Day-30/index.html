@@ -5,10 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-      
+      .slider{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .slides {
+        display: flex;
+        
+      }
+      .slide{
+        flex: 0 0 100%;
+        height: 100vh;
+    
+
+    }
+      .slide img{
+        width: 100%;
+        height: 100vh;
+      }
     </style>
 </head>
 <body onload="Loaddata()">
-    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="../images/image-1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../images/image-2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../images/image-3.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
