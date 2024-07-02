@@ -3,5 +3,5 @@ function changeSlide(n){
     const slides = document.querySelectorAll(".slide");
     const numSlides= slides.length;
     currentSlide = (currentSlide + n + numSlides) % numSlides;
-    document.querySelector(".slides")
+    document.querySelector(".slides").style.transform = `translateX(${currentSlide * 100}%)`
 }
