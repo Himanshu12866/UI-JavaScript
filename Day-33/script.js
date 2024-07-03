@@ -10,7 +10,7 @@ function LoadBtn() {
             alert("Please enter all values")
         }
         for (var i = 1; i <= valueLength; i++) {
-            document.querySelector("p").innerHTML += `<div class="text-danger bi bi-dot" style="font-size:20px"> ${i * inputNumber}<div> &nbsp`
+            document.querySelector("p").innerHTML += `<div class="text-primary bi bi-arrow-right" style="font-size:20px">${inputNumber} X ${i} =  ${i * inputNumber}<div> &nbsp <br>`
 
         }
     }
