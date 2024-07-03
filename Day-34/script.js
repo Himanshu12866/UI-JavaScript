@@ -16,3 +16,4 @@ function LoadClick() {
         alert("Please Enter value less than 100")
     }
 }
+
