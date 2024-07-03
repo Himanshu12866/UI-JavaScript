@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-33 | Different Examples Using Loops</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-   
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <h1 class="text-center m-3">Mathematics Table Generator</h1>
-  <div class="container w-50">
-    <div class="d-flex justify-content-center align-items-center w-100">
+    <div class="container w-50">
+      <div class="d-flex justify-content-center align-items-center w-100">
         <div>
-            <div class="input-group m-2">
-                <input type="number" id="valueNumber" class="form-control d-block" placeholder="Enter a number">
-                <span class="input-group-text">Number</span><br>
-            </div>
-            <div class="input-group m-2">
-               <input type="number" id="valueLength"  class="form-control" placeholder="Enter Times">
-               <span class="input-group-text">Lenght </span>
-            </div>
+          <div class="input-group m-2">
+            <input
+              type="number"
+              id="valueNumber"
+              class="form-control d-block"
+              placeholder="Enter a number"
+            />
+            <span class="input-group-text">Number</span><br />
+          </div>
+          <div class="input-group m-2">
+            <input
+              type="number"
+              id="valueLength"
+              class="form-control"
+              placeholder="Enter Times"
+            />
+            <span class="input-group-text">Lenght </span>
+          </div>
         </div>
+      </div>
+      <button
+        class="btn btn-dark p-2 m-3 w-100 text-center"
+        onclick="LoadBtn()"
+      >
+        Click Me
+      </button>
     </div>
-    <button class="btn btn-dark p-2 m-3 w-100 text-center" onclick="LoadBtn()">Click Me</button>
-</div>
-  <hr>
+    <hr />
     <p class="m-3 text-center"></p>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
