@@ -6,7 +6,8 @@ function LoadClick() {
     if (rows < 100) {
         for (let i = 1; i <= rows; i++) {
             for (let j = i; j <= i; j++) {
-                pattern += i + " &nbsp";
+                // pattern += i + " &nbsp";
+                pattern += "*" + " &nbsp";
             }
             document.getElementById("P1").innerHTML += pattern + "<br>";
 
@@ -64,3 +65,25 @@ function LoadClick3() {
     }
 
 }
+// function LoadClick3(){
+//     let rows = parseInt(prompt("Enter value"));
+
+// // pattern variable carries the final pattern in string format
+
+// // outer loop runs for `rows` no. of times
+// for (let n = 1; n <= rows; n++) {
+//     let pattern = "";
+//    // Inner Loop - I -> for the spaces
+//    for (let space = 1; space <= rows - n; space++) {
+//       pattern += " ";
+//    }
+
+//    // Inner Loop - II -> for the numbers
+//    for (let num = 1; num <= 2 * n - 1; num++) {
+//       pattern += num + "<&nbsp;>";
+//       document.getElementById("P4").innerHTML += pattern + "<br>";
+//    }
+
+// }
+// }
+
