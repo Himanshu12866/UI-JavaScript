@@ -110,3 +110,52 @@ function LoadClick5(){
         document.getElementById("P6").innerHTML += value + " || "
     }
 }
+
+// function counterSelected(selectObj){
+//     let numSelected = 0;
+//     for(let i = 0; i < selectObj.options.length; i++){
+//         if(selectObj.options[i].selected){
+//             numSelected++;
+//         }
+//     }
+// return numSelected;
+//  }
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click" , () => {
+//     const musicTypes = document.getElementById("musicTypes")
+
+//     alert(` You have Selected ${counterSelected(musicTypes.value)}`);
+// })
+// function countSelected(selectObject) {
+//     let numberSelected = 0;
+//     for (let i = 0; i < selectObject.options.length; i++) {
+//       if (selectObject.options[i].selected) {
+//         numberSelected++;
+//       }
+//     }
+//     return numberSelected;
+//   }
+  
+//   const btn = document.getElementById("btn");
+  
+//   btn.addEventListener("click", () => {
+//     const musicTypes = document.selectForm.musicTypes;
+//     console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+//   });
+
+// function counterSelected(selectObj){
+//     let numSelected = 0;
+//     for(let i = 0; i < selectObj.options.length; i++){
+//         if(selectObj.options[i].selected){
+//             numSelected++;
+//         }
+//     }
+//     return numSelected;
+// }
+
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", () => {
+//     const musicTypes = document.getElementById("musicTypes");
+//     alert(`You have selected ${counterSelected(musicTypes)} options.`);
+// });
+
