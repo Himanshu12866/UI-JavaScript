@@ -61,7 +61,7 @@ function LoadClick3() {
         for (k = 1; k <= 2 * i - 1; k++) {
             pattern += i
         }
-        document.getElementById("P4").innerHTML +=  pattern + "<br>"
+        document.getElementById("P4").innerHTML += pattern + "<br>"
     }
 
 }
@@ -88,25 +88,25 @@ function LoadClick3() {
 // }
 
 
-function LoadClick4(){
+function LoadClick4() {
     let rows = parseInt(prompt("Enter a value"))
     let pattern = " ";
-    for(let i = 1; i<= rows ; i++){
-        for(let j = 1; j<= rows - i; j++){
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= rows - i; j++) {
             pattern += "<br>"
         }
-        for(let k = 1; k<= 2 * i - 1; k++){
+        for (let k = 1; k <= 2 * i - 1; k++) {
             pattern += "*";
         }
     }
     document.getElementById("P5").innerHTML = pattern + "<br>"
-    
+
 }
-function LoadClick5(){
+function LoadClick5() {
     let value = prompt("Enter Name");
     let length = parseInt(prompt("Enter length"))
-    document.getElementById("P6").innerHTML ="";
-    for( let i = 0; i<= length; i++){
+    document.getElementById("P6").innerHTML = "";
+    for (let i = 0; i <= length; i++) {
         document.getElementById("P6").innerHTML += value + " || "
     }
 }
@@ -135,9 +135,9 @@ function LoadClick5(){
 //     }
 //     return numberSelected;
 //   }
-  
+
 //   const btn = document.getElementById("btn");
-  
+
 //   btn.addEventListener("click", () => {
 //     const musicTypes = document.selectForm.musicTypes;
 //     console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
@@ -159,3 +159,15 @@ function LoadClick5(){
 //     alert(`You have selected ${counterSelected(musicTypes)} options.`);
 // });
 
+function LoadClick6() {
+    let value = parseInt(prompt("Enter value"));
+    let result = document.getElementById("P7")
+    result.innerHTML = ""
+    result.classList = "text-center p-2 bg-warning m-2 text-light"
+    do {
+        result.innerHTML += `<br>Your value is ${value}`;
+        value++;
+
+    }
+    while (value <= 20)
+}
