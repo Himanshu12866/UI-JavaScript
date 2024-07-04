@@ -52,15 +52,15 @@ function LoadClick2() {
 function LoadClick3() {
     document.getElementById("P4").innerHTML = "";
     let rows = parseInt(prompt("Enter Value"));
-    for (let i = 0; i < rows; i++) {
+    for (let i = 1; i <= rows; i++) {
         let pattern = "";
-        for (let j = 0; j < rows - i; j++) {
+        for (let j = 1; j <= rows - i; j++) {
             pattern += "&nbsp&nbsp";
         }
-        for (k = 1; k < 2 * i - 1; k++) {
+        for (k = 1; k <= 2 * i - 1; k++) {
             pattern += i
         }
-        document.getElementById("P4").innerHTML += pattern + "<br>"
+        document.getElementById("P4").innerHTML +=  pattern + "<br>"
     }
 
 }
