@@ -87,3 +87,26 @@ function LoadClick3() {
 // }
 // }
 
+
+function LoadClick4(){
+    let rows = parseInt(prompt("Enter a value"))
+    let pattern = " ";
+    for(let i = 1; i<= rows ; i++){
+        for(let j = 1; j<= rows - i; j++){
+            pattern += "<br>"
+        }
+        for(let k = 1; k<= 2 * i - 1; k++){
+            pattern += "*";
+        }
+    }
+    document.getElementById("P5").innerHTML = pattern + "<br>"
+    
+}
+function LoadClick5(){
+    let value = prompt("Enter Name");
+    let length = parseInt(prompt("Enter length"))
+    document.getElementById("P6").innerHTML ="";
+    for( let i = 0; i<= length; i++){
+        document.getElementById("P6").innerHTML += value + " || "
+    }
+}
