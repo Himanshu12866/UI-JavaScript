@@ -16,5 +16,14 @@
         "rating" : 4.9,
         "stock" : "Yes",
         "stores"  : ["Delhi", "Mumbai", "Hyderabad" , "Pune" ]
+    },
+    {
+        "id" :3 ,
+        "name" : "MSI",
+        "modal" : "Modern 15 Pro",
+        "price" : "999$",
+        "rating" : 4.9,
+        "stock" : "Yes",
+        "stores"  : ["Delhi", "Mumbai", "Hyderabad" , "Pune" ]
     }
 ]
