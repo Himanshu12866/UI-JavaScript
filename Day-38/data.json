@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "name" : "Apple",
+        "modal" : "MacBook Air 14 Pro",
+        "price" : "899$",
+        "rating" : 4.9,
+        "stock" : "Yes",
+        "stores"  : ["Delhi", "Mumbai", "Hyderabad" , "Pune" ]
+    },
+    {
+        "id" : 2,
+        "name" : "Apple",
+        "modal" : "MacBook Air 15 Pro",
+        "price" : "999$",
+        "rating" : 4.9,
+        "stock" : "Yes",
+        "stores"  : ["Delhi", "Mumbai", "Hyderabad" , "Pune" ]
+    }
+]
