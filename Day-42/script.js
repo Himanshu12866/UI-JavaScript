@@ -1,13 +1,13 @@
 class Product {
-    Name =  "SamsungTV";
-    Price =  6733;
+    Name = "SamsungTV";
+    Price = 6733;
     qty = 10;
-    Print(){
-        document.write (`Product Name is<b> ${this.Name}</b> and Price is <b> ${this.Price.toLocaleString()}</b><br>`)
+    Print() {
+        document.write(`Product Name is<b> ${this.Name}</b> and Price is <b> ${this.Price.toLocaleString()}</b><br>`)
     }
 
-    Qty(){
-        document.write (`Product Qty is <b> ${(this.qty * this.Price).toLocaleString()}</b>`)
+    Qty() {
+        document.write(`Product Qty is <b> ${(this.qty * this.Price).toLocaleString()}</b>`)
     }
 }
 let obj = new Product();
