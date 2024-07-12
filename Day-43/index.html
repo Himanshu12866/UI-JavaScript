@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day-43 | JavaScript Classes | Constructor</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
-<body>
-    
+<body class="text-center">
+    <select class="form-select w-25 d-inline m-3" name="list" id="list">
+        <option value="oracle">Oracle</option>
+        <option value="mysql">MySQL</option>
+        <option value="sqlserver">SQL Server</option>
+        <option value="mongodb">MongoDB</option>
+    </select>
+    <button class="btn btn-primary" onclick="InsertBtn()">Insert Data</button>
+    <button class="btn btn-danger" onclick="DeleteBtn()">Delete Data</button>
 </body>
 </html>
