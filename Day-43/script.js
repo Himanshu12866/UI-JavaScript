@@ -4,9 +4,11 @@ class DataBase {
     }
     Insert(){
         alert("Item Added to Data Base Successfully")
+        document.querySelector("select").value = "";
     }
     Delete(){
         alert("Item Deleted From Data Base Successfully")
+        document.querySelector("select").value = "";
     }
 }
 function InsertBtn(){
