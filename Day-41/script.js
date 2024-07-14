@@ -21,11 +21,11 @@ function LoadData() {
     if (role === "Admin") {
         obj.ProductName = prompt("Entet New Name")
     }
-    else {
-        alert(`${name} You are not allowed to change the product name`)
-    }
     if (obj.ProductName) {
         document.write(obj.ProductName)
+    }
+    else {
+        alert(`${name} You are not allowed to change the product name`)
     }
 
 
