@@ -1,4 +1,4 @@
-export default function Credit(){
+export default function Credit() {
     return `  
         <legend>Credit Card Payment</legend>
         <dl>

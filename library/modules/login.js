@@ -1,9 +1,9 @@
 var title = "Login Form"
 
-export function Title(){
-return title
+export function Title() {
+    return title
 }
-export default function Login(){
+export default function Login() {
     return `
     <div>
     <h2>Login Form</h2>
