@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-51 | Javascript Onmousemove Event</title>
+    <style>
+        img{
+           animation: rotate .6s linear infinite;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg) scale(1);
+                
+            }
+            to{
+                transform: rotate(360deg) scale(2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div onmousemove="Move(event)" style="height: 100vh; border: 2px solid red;"></div>
+    <img src="../images/ind.png" alt="">
+    <script src="script.js"></script>
+</body>
+</html>
