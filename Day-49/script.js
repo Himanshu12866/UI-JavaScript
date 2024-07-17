@@ -40,7 +40,9 @@ function BodyLoad(){
     Img.style.height = "100px";
     Img.src = data;
     Img.addEventListener("mouseover" , (e) => {
-        document.getElementById("Preview").src = data
+        document.getElementById("Preview").src = data;
+        // document.getElementById("Preview").src = e.target.src; // or we can write like this
+
     })
     document.querySelector("nav").appendChild(Img)
 
