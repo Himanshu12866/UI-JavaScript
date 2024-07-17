@@ -4,14 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-49 | JavaScript Events</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            grid-gap: 10px;
+        }
+        nav{
+            border: 2px solid rgb(175, 15, 15);
+            /* width: 100%; */
+            /* height: 400px; */
+            margin: 10px;
+            padding: 10px;
+        }
+        nav img{
+            width: 100%;
+        }
+        main{
+            width: 100%;
+            border: 2px solid black;
+        }
+        main img{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
   </head>
-  <body>
+  <body onload="BodyLoad()">
     <!-- <button name="btn btn-primary" id="Btn" value="Submit" onclick="InsertClick(this , event)">Insert</button> -->
     <button name="Prev" onclick="Media(this)">Prev</button>
     <button name="Play" onclick="Media(this)">Play</button>
     <button name="Pause" onclick="Media(this)">Pause</button>
     <button name="Next" onclick="Media(this)">Next</button>
+    <button onclick="GetData(1 , 'TV', 40000 , true , ['Delhi' , 'Hyd'])">Data</button>
+    <div class="box"></div>
     <p></p>
+
+    <div class="container">
+        <nav></nav>
+        <main>
+            <img src="../images/image-1.jpg" id="Preview" alt="">
+        </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
