@@ -2,6 +2,9 @@ let allBox = document.querySelector(".content").children;
 const boxWidth = allBox[0].querySelector(".inner").offsetWidth;
 const boxHeight = allBox[0].querySelector(".inner").offsetHeight;
 var div = document.createElement("div");
+document.oncontextmenu = () => {
+    return false;
+}
 div.style.position = "absolute";
 div.style.height = boxHeight + "px";
 div.style.width = boxWidth + "px";
