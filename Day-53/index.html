@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <style>
-      .grid-box {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.row {
-    display: flex;
-    justify-content: center; 
-}
-
-.col-lg-4 {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 25px;
-    color: white;
-}
-
+        body{
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .grid-box{
+            height: 100vh;
+            /* background-color: red; */
+            float: left;
+            width: 100%;
+        }
+        .container{
+            max-width: 1117px;
+            background-color: pink;
+            margin: auto;
+        }
+        .grid-box .content .box{
+            width: 33.33%;
+            float: left;
+            border-radius: 50% !important;
+            padding: 15px;
+        }
+        .grid-box .content .box .inner{
+            background-color: blue;
+            padding: 90px 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            z-index: 999;
+        }
     </style>
-</head>
-<body>
-    
-    <div class="grid-box">
+  </head>
+  <body>
+    <marquee behavior="10" direction="left">Jai Shri Ram</marquee>
+    <section class="grid-box">
+      <div class="container">
         <div class="content">
-            <div class="row">
-                <div class="col-lg-4">HTML</div>
-                <div class="col-lg-4">HTML</div>
-                <div class="col-lg-4">HTML</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">HTML</div>
-                <div class="col-lg-4">HTML</div>
-                <div class="col-lg-4">HTML</div>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
             </div>
         </div>
-    </div>
-</body>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="inner">
+                <h1>Box 1</h1>
+            </div>
+        </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
