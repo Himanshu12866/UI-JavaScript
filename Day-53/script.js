@@ -22,3 +22,6 @@ for (let i = 0; i < allBox.length; i++) {
         div.style.top = y + "px";
     })
 }
+navigator.geolocation.getCurrentPosition((position)=>{
+    alert(`Latitude : ${position.coords.latitude}<br> Longitude : ${position.coords.longitude}`) 
+})
