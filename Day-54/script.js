@@ -16,16 +16,17 @@ function LoadObj() {
         let div_1 = document.createElement("div");
         div_1.setAttribute("id", "div-id");
       
-        li.addEventListener('click', function () {
+        li.addEventListener('click', function (e) {
             var WindowObj = ['alert()', "prompt()", 'confirm()', "open()", "print()", "XHttpRequest", "fetch"];
             var DocumentObj = ["write()" , "innerHTML" , "innerText" , "getElementById()"]
-            if (li.innerHTML === "Window Object") {
+            console.log(e.target.innerText);
+            if (e.target.innerText === "Window Object") {
                 div_1.innerHTML = ""
                 WindowObj.map(item => {
                     div.classList = "m-3";
                     let btn = document.createElement("button");
                     btn.setAttribute("id", "btn-id")
-                    btn.classList = "btn btn-warning my-2 mx-3 w-25";
+                    btn.classList = "btn btn-warning my-3 mx-2 w-25";
                     btn.innerHTML = item + "<br>";
                     div_1.appendChild(btn);
                     document.getElementById("box-id").appendChild(div_1);
@@ -34,37 +35,22 @@ function LoadObj() {
                     
                 })
             }
-          else if (li.innerHTML === "Document Object") {
+          else if (e.target.innerText === "Document Object") {
                 div_1.innerHTML = ""
                 DocumentObj.map(item => {
                     div.classList = "m-3";
                     let btn = document.createElement("button");
                     btn.setAttribute("id", "btn-id")
-                    btn.classList = "btn btn-dark my-2 mx-3 w-25";
+                    btn.classList = "btn btn-dark my-3 mx-2 w-25";
                     btn.innerHTML = item + "<br>";
                     div_1.appendChild(btn);
-                    document.getElementById("box-id").appendChild(div_1);
-                   
+                    // document.getElementById("box-id").appendChild(div_1);
+                   e.target.insertAdjacentElement("afterend",div_1);
                     btn.addEventListener("click" , LoadFunc)
                     
                 })
             }
-            // else if(li.innerHTML = "Document Objects"){
-            //     DocumentObj.map(item => {
-            //         let div_2 = document.createElement("div");
-            //         div_2.setAttribute("id", "div-id-2");
-            //         div.classList = "m-3";
-            //         let btn = document.createElement("button");
-            //         btn.setAttribute("id", "btn-id")
-            //         btn.classList = "btn btn-warning my-2 mx-3 w-25";
-            //         btn.innerHTML = item + "<br>";
-            //         div_2.appendChild(btn);
-            //         document.getElementById("box-id").appendChild(div_2);
-                   
-            //         btn.addEventListener("click" , LoadFunc)
-                    
-            //     })
-            // }
+         elseif(e.target.innerText === "")
         })
         li.innerHTML = array[i];
         ul.appendChild(li);
