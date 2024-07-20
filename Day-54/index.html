@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day-54 | JavaScript Browser Objects</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <style>
+      body {
+        left: 0;
+        top: 0;
+        padding: 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
     <h1 class="text-center m-3">There are mainly 5 types of Browser Objects</h1>
-    <button onclick="LoadObj()" class="btn btn-dark m-3">Load Objects</button>
-    <div id="box" ></div>
+    <button style="margin: 10px;" onclick="LoadObj()" class="btn btn-dark w-100">
+      Load Browser Objects
+    </button>
+    <section class="parent">
+      <div id="box" class="w-75"></div>
+    </section>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -11,7 +11,7 @@ function LoadObj() {
     let li = document.createElement("button");
     li.style.fontWeight = "bold";
 
-    li.classList = "btn btn-danger m-2 w-75 text-center";
+    li.classList = "btn btn-danger m-2 w-100 text-center";
    
     let div_1 = document.createElement("div");
     div_1.setAttribute("id", "div-id");
@@ -113,8 +113,8 @@ function LoadFunc(event) {
     alert("Your name is " + name);
   } 
   else if(buttonText ==="confirm()"){
-    let confirm = confirm("Are you sure you want to delete this file?");
-    if(confirm){
+    let confirmed = confirm("Are you sure you want to delete this file?");
+    if(confirmed){
       alert("File deleted successfully");}
       else {
         alert("File not deleted");
@@ -122,6 +122,7 @@ function LoadFunc(event) {
   }
   
   
+
   else {
     alert("Unmatched");
   }
