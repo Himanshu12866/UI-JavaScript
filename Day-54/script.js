@@ -123,6 +123,14 @@ function LoadFunc(event) {
         alert("File not deleted");
       }
   }
+  else if(buttonText === "open()") {
+    let url = prompt("Enter the URL of the website you want to open");
+    window.open(url);
+  }
+  else if(buttonText === "print()"){
+    alert("Printing Started")
+    window.print();
+  }
   
   
 
