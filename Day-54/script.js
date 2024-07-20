@@ -103,18 +103,27 @@ function LoadObj() {
     box.appendChild(div);
   }
 }
-function LoadFunc(arguments) {
-  if (document.getElementById("btn-id").innerHTML == "alert()<br>") {
-    alert("Jia Sri Ram")
+function LoadFunc(event) {
+  let buttonText = event.target.innerText.trim();
+  
+  if (buttonText === "alert()") {
+    alert("Jai Sri Ram");
+  } else if (buttonText === "prompt()") {
+    let name = prompt("Enter your name");
+    alert("Your name is " + name);
+  } 
+  else if(buttonText ==="confirm()"){
+    let confirm = confirm("Are you sure you want to delete this file?");
+    if(confirm){
+      alert("File deleted successfully");}
+      else {
+        alert("File not deleted");
+      }
   }
-
-  console.log(arguments.target.innerText);
-  if (arguments.target.innerText == "alert()<br>") {
-    let name = prompt("Enter your name")
-    alert("Your name is " + name)
-  }
+  
+  
   else {
-    alert("Unmatched")
+    alert("Unmatched");
   }
-
 }
+
