@@ -196,7 +196,7 @@ function LoadFunc(event) {
     let p = document.createElement("p");
     let msg = prompt("Enter Your Message");
     p.innerHTML = msg;
-    document.getElementById("ProductCard").appendChild(p);
+    document.getElementById("btn-id").appendChild(p);
   }
 
 
