@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-56 | Stopwatch </title>
+  <style>
+    .stopwatch {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .display {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .buttons button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="stopwatch">
+    <div class="display" id="display">00:00:00</div>
+    <div class="buttons">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="stopStopwatch()">Stop</button>
+      <button onclick="resetStopwatch()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
