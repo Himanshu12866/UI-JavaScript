@@ -1,3 +1,4 @@
+
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
@@ -15,8 +16,9 @@ function startStopwatch() {
   }
 
   intervalId = setInterval(() => {
+    
     seconds++;
-    if (seconds === 60) {
+    if (seconds === 100) {
       seconds = 0;
       minutes++;
       if (minutes === 60) {
@@ -25,7 +27,7 @@ function startStopwatch() {
       }
     }
     updateDisplay();
-  }, 1000);
+  }, 10);
 }
 
 function stopStopwatch() {
