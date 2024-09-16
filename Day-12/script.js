@@ -46,10 +46,7 @@ const getHoverDirection = function (event) {
             event.currentTarget.classList.remove("bottom");
             event.currentTarget.classList.remove("left");
 
-            // Add the event and direction classes.
-            // > If support for IE11 is not needed.
-            // event.currentTarget.classList.add(event.type, dir);
-            // > If support for IE11 is needed.
+          
             event.currentTarget.className += " " + event.type + " " + dir;
           },
           false
